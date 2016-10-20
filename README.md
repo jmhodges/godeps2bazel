@@ -1,4 +1,5 @@
-= godeps2bazel
+godeps2bazel
+============
 
 `godeps2bazel` takes a [Godeps](https://github.com/tools/godep) JSON file and
 turns it into the equivalent [bazel](https://www.bazel.io/) repository commands.
