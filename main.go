@@ -69,7 +69,7 @@ func main() {
 			continue
 		}
 		remotes[repo.Root] = true
-		repos = append(repos, bzrepo{repoName(repo.Root), repo.Repo, d.Rev})
+		repos = append(repos, bzrepo{repoName(repo.Root), repo.Root, d.Rev})
 	}
 
 	sort.Sort(repos)
@@ -80,7 +80,7 @@ func main() {
     name = "%s",
     importpath = "%s",
     commit = "%s",
-)`, r.name, r.remote, r.commit)
+)`, r.name, r.path, r.commit)
 		out = append(out, msg)
 	}
 	fmt.Printf("%s\n", strings.Join(out, "\n\n"))
@@ -121,7 +121,7 @@ func repoName(prefix string) string {
 
 type bzrepo struct {
 	name   string
-	remote string
+	path   string
 	commit string
 }
 
