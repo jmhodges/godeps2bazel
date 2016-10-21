@@ -62,7 +62,7 @@ func main() {
 	for _, d := range g.Deps {
 		repo, err := vcs.RepoRootForImportPath(d.ImportPath, false)
 		if err != nil {
-			log.Fatalf("unable to detect actual git repo URL for %#v: %s", d.ImportPath, err)
+			log.Fatalf("unable to detect actual repo URL for %#v: %s", d.ImportPath, err)
 		}
 
 		if remotes[repo.Root] {
