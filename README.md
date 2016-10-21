@@ -2,7 +2,12 @@ godeps2bazel
 ============
 
 `godeps2bazel` takes a [Godeps](https://github.com/tools/godep) JSON file and
-turns it into the equivalent [bazel](https://www.bazel.io/) repository commands.
+turns it into the equivalent [bazel](https://www.bazel.io/) repository
+commands.
+
+It's handy to use alongside
+[gazelle](https://github.com/bazelbuild/rules_go/tree/master/go/tools/gazelle/gazelle),
+the Go BUILD file generator.
 
 Install with `go get github.com/jmhodges/godeps2bazel`.
 
