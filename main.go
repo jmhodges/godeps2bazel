@@ -64,7 +64,7 @@ func main() {
 		if err != nil {
 			log.Fatalf("unable to detect actual git repo URL for %#v: %s", d.ImportPath, err)
 		}
-		// repo.Root is the actual root import path of the package, and can be used to make a uni
+
 		if remotes[repo.Root] {
 			continue
 		}
